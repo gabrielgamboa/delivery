@@ -3,7 +3,7 @@ import { prisma } from "../../../../database/prismaClient";
 import { ICreateClientDTO } from "../../dtos/ICreateClientDTO";
 import { IClientsRepository } from "../IClientsRepository";
 
-class ClientsRepository implements IClientsRepository {
+export class ClientsRepository implements IClientsRepository {
     async create({ username, password }: ICreateClientDTO): Promise<Client> {
         const client = await prisma.client.create({
             data: {
