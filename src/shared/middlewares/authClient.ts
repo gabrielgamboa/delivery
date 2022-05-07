@@ -7,7 +7,7 @@ interface ITokenPayload {
     id: string;
 }
 
-export async function auth (request: Request, response: Response, next: NextFunction) {
+export async function authClient (request: Request, response: Response, next: NextFunction) {
     const authHeader = request.headers.authorization;
 
     if (!authHeader) {
