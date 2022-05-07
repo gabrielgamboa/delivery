@@ -19,7 +19,7 @@ export async function authDeliveryman (request: Request, response: Response, nex
     try {
         const { id: id_deliveryman } = verify(token, "d3aa349c8d932ea71f11aa096ba29f61") as ITokenPayload;
 
-        const user = await prisma.client.findUnique({
+        const user = await prisma.deliveryman.findUnique({
             where: {
                 id: id_deliveryman,
             }
