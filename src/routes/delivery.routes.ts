@@ -13,6 +13,6 @@ const updateDeliveryWithDeliverymanController = new UpdateDeliveryWithDeliveryma
 
 deliveryRoutes.post("/", authClient, createDeliveryController.handle);
 deliveryRoutes.get("/available", authDeliveryman, findAllAvailableController.handle);
-deliveryRoutes.put("/updateDeliveryman/:id", authDeliveryman, updateDeliveryWithDeliverymanController.handle);
+deliveryRoutes.put("/updateDeliveryman/:id_delivery", authDeliveryman, updateDeliveryWithDeliverymanController.handle);
 
 export { deliveryRoutes };
